@@ -65,7 +65,7 @@ public class ControllerNoteImpl {
                         RequestBody requestBody = method.getAnnotation(RequestBody.class);
                         map.put(StringUtils.getUrlValue(controller.value() + requestBody.value()), RequestBodyServletProxy.class);
                         //把请求url 和 url指向Class和函数 加入如关系Mapper
-                        Constants.controllerMapper.put(requestBody.value(), new ControllerModel(clazz, method));
+                        Constants.controllerMapper.put(controller.value() + requestBody.value(), new ControllerModel(clazz, method));
                         continue;
                     }
 
@@ -74,12 +74,11 @@ public class ControllerNoteImpl {
                         RequestBody requestBody = method.getAnnotation(RequestBody.class);
                         map.put(StringUtils.getUrlValue(controller.value() + requestBody.value()), RequestBodyJsonServletProxy.class);
                         //把请求url 和 url指向Class和函数 加入如关系Mapper
-                        Constants.controllerMapper.put(requestBody.value(), new ControllerModel(clazz, method));
+                        Constants.controllerMapper.put(controller.value() + requestBody.value(), new ControllerModel(clazz, method));
                         continue;
                     }
                 }
 
-                logger.infoRed(clazz.getName());
             }
         }
 
