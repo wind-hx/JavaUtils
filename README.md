@@ -135,11 +135,14 @@ public class StudentServlet {
 
 ```
 
-以上代码可以看到控制台打印信息:对象:Student{studentId=1, studentName='haha'}
+请求地址:http://127.0.0.1:8080/getName3?studentName=测试&studentId=1
+跳转到index.jsp页面并打印出:对象:Student{studentId=1, studentName='测试'}
+
+以上方式省掉request.getParameter("studentName");也方便使用,传承oop的思想,万物皆对象.
 
 使用说明到此结束,就是这么简单!
 
-## Bug很多,可以用来测试以及玩,千万不要用在项目中,Bug很多,可以用来测试以及玩,千万不要用在项目中,Bug很多,可以用来测试以及玩,千万不要用在项目中.
+## Bug很多,可以来测试以及玩,千万不要用在项目中,Bug很多,可以来测试以及玩,千万不要用在项目中,Bug很多,可以来测试以及玩,千万不要用在项目中.
 
 # 欢迎大家提意见!
 
