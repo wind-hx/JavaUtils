@@ -1,6 +1,6 @@
 # JavaUtils
 
-WebMVC,仿SpringMVC,轻量级,融入fastjson.
+WebMVC,仿SpringMVC,轻量级!
 
 ## 为什么写?
 
