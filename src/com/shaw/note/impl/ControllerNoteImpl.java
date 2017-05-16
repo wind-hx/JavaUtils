@@ -71,7 +71,7 @@ public class ControllerNoteImpl {
 
                     //判断是否为RequestBodyJson注解函数 请求数据就是json形式
                     if (method.isAnnotationPresent(RequestBodyJson.class)) {
-                        RequestBody requestBody = method.getAnnotation(RequestBody.class);
+                        RequestBodyJson requestBody = method.getAnnotation(RequestBodyJson.class);
                         map.put(StringUtils.getUrlValue(controller.value() + requestBody.value()), RequestBodyJsonServletProxy.class);
                         //把请求url 和 url指向Class和函数 加入如关系Mapper
                         Constants.controllerMapper.put(controller.value() + requestBody.value(), new ControllerModel(clazz, method));

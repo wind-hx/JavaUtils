@@ -8,7 +8,7 @@ import java.lang.annotation.*;
  * 自动注入注解
  *
  */
-@Target(ElementType.FIELD)
+@Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 @Documented

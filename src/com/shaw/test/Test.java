@@ -12,12 +12,6 @@ import javax.servlet.http.HttpServletRequest;
  */
 public class Test {
 
-    @AutoBody
-    private Student stu;
-
-    public Student getStudent() {
-        return stu;
-    }
 
 
 }

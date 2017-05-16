@@ -48,6 +48,7 @@ public class StringUtils {
      * 提取request里的键值对 通过反射来把键值对转换成 对应的pojo
      * @param request request对象
      * @param objClass 需要转的对象class
+     * @param parameterName 注解里的请求参数名称 直接调用getParameter取值就可以
      * @return 你需要的对象
      * */
     public static <T> T requestConvertPOJO(HttpServletRequest request, Class<T> objClass, String parameterName) throws Throwable {
